@@ -1,0 +1,73 @@
+<html>
+  <head>
+    <title>Fuel Script Ui Design https://github.com/Delarmuss</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body style="display: none;">
+    <div class="fuel-container">
+      <div class="fuel-wrapper">
+        <div class="fuel-header">
+          <div class="fuel-header-logo">
+            <img src="img/logo.png" style="width: 100%; height: 100%" />
+          </div>
+          <div class="fuel-header-title">Petrol Ofisi</div>
+        </div>
+        <div class="fuel-main">
+          <div class="fuel-car-info">
+            <div class="fuel-car-text">Petrol Ofisi Benzin Deposu</div>
+            <div class="fuel-car-fuel-background">
+              <div class="fuel-car-fuel-stock-litre">%</div>
+              <img src="img/fuel.svg">
+              <div class="fuel-car-fuel-stock-value"></div>
+            </div>
+          </div>
+
+          <div class="fuel-car-info">
+            <div class="fuel-car-text">Araç Benzin Deposu</div>
+            <div class="fuel-car-fuel-background">
+              <div class="fuel-car-fuel-litre">%</div>
+              <img src="img/fuel.svg">
+              <div class="fuel-car-fuel-value"></div>
+            </div>
+          </div>
+
+          <div class="fuel-detail">
+            <div class="fuel-detail-text">Litre Fiyatı</div>
+            <div class="fuel-detail-price">$</div>
+          </div>
+
+          <div class="fuel-price">
+            <div class="fuel-price-text">Ücret</div>
+            <div class="fuel-price-input">
+              <button id="fuel-minus"">-</button>
+              <input id="fuel-price-input" type="number" placeholder="$"/>
+              <button id="fuel-plus">+</button>
+            </div>
+          </div>
+
+          <div class="fuel-buttons">
+            <button id="fuel-full">Depoyu Fulle</button>
+            <button id="fuel-price">ücret kadar doldur</buttton>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    <div class="fuel-modal">
+        <div class="fuel-header">
+          <div class="fuel-header-logo">
+            <img src="img/logo.png" style="width: 100%; height: 100%" />
+          </div>
+          <div class="fuel-header-title">Petrol Ofisi</div>
+        </div>
+        <div class="fuel-modal-text">Depoyu <b>$99,99</b> karşılığında doldurmak istiyor musunuz?
+        </div>
+        <div class="fuel-modal-buttons">
+            <button id="fuel-accept">onayla</button>
+            <button id="fuel-decline">iptal</buttton>
+        </div>
+      </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
