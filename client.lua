@@ -298,28 +298,3 @@ function LoadAnimDict(dict)
 		end
 	end
 end
-
-function addBlip(x,y,z,idtype,idcolor,text,scale)
-	if idtype ~= 0 then
-		local blip = AddBlipForCoord(x,y,z)
-		SetBlipSprite(blip,idtype)
-		SetBlipAsShortRange(blip,true)
-		SetBlipColour(blip,idcolor)
-		SetBlipScale(blip,scale)
-
-		if text then
-			BeginTextCommandSetBlipName("STRING")
-			AddTextComponentString(text)
-			EndTextCommandSetBlipName(blip)
-		end
-		return blip
-	end
-end
-
-Citizen.CreateThread(function()
-	for k,v in pairs(Config.gas_station_locations) do
-		local x,y,z = table.unpack(v.coord)
-		local blips = Config.gas_station_types[v.type].blips
-		addBlip(x,y,z,blips.id,blips.color,blips.name,blips.scale)
-	end
-end)
